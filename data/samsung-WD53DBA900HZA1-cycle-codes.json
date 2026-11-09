@@ -1,0 +1,1132 @@
+{
+  "model": "Samsung WD53DBA900HZA1 (Bespoke AI Laundry Combo, ventless heat pump)",
+  "smartthings_ocf": {
+    "mnmo": "AWM-US-M64-24-WD80",
+    "vid": "DA-WM-WM-01021",
+    "firmware_mnfv": "20260416.215549"
+  },
+  "captured": "2026-11-08",
+  "method": "Each cycle was selected on the physical panel and read back from the SmartThings API (samsungce.washerCycle + supportedCycles).",
+  "how_to_set": {
+    "capability": "samsungce.washerCycle",
+    "command": "setWasherCycle",
+    "argument": "short code, e.g. \"51\" (not \"Table_02_Course_51\")",
+    "dry_toggle": "samsungce.washerCycle setCycleType allInOne | washingOnly | dryingOnly",
+    "time_dry_minutes": "samsungce.dryerDryingTime setDryingTime (A8/AA)",
+    "requires": "Smart Control (remote control) enabled on the washer panel"
+  },
+  "caveats": [
+    "Minutes are the machine's idle estimate at default settings; real runs vary (bulky loads can stall in spin).",
+    "Remote dry on/off was tested only on 96 Less Microfiber; other codes list it in the schema.",
+    "A1, 06, 54, 58 options not captured in detail."
+  ],
+  "cycles": [
+    {
+      "code": "AD",
+      "washerCycle_value": "Table_02_Course_AD",
+      "panel_name": "AI Opti Wash and Dry",
+      "allowed_cycleTypes": [
+        "allInOne",
+        "washingOnly",
+        "dryingOnly"
+      ],
+      "default_cycleType": "allInOne",
+      "estimated_minutes_default": 142,
+      "options": {
+        "cycleTypes": [
+          "allInOne",
+          "washingOnly",
+          "dryingOnly"
+        ],
+        "waterTemperature": [
+          "tapCold",
+          "cold",
+          "warm",
+          "hot"
+        ],
+        "waterTemperature_default": "warm",
+        "spinLevel": [
+          "rinseHold",
+          "noSpin",
+          "extraLow",
+          "low",
+          "medium",
+          "high",
+          "extraHigh"
+        ],
+        "spinLevel_default": "extraHigh",
+        "soilLevel": [
+          "normal"
+        ],
+        "soilLevel_default": "normal",
+        "dryingLevel": [
+          "damp",
+          "less",
+          "normal",
+          "more"
+        ],
+        "dryingLevel_default": "normal",
+        "dryingTime": [],
+        "dryingTime_default": "0",
+        "wrinklePrevent": [
+          "on",
+          "off"
+        ],
+        "wrinklePrevent_default": "off",
+        "bubbleSoak": [
+          "on",
+          "off"
+        ],
+        "bubbleSoak_default": "off",
+        "washingOnly_spinLevel_default": "high"
+      }
+    },
+    {
+      "code": "55",
+      "washerCycle_value": "Table_02_Course_55",
+      "panel_name": "Activewear",
+      "allowed_cycleTypes": [
+        "allInOne",
+        "washingOnly",
+        "dryingOnly"
+      ],
+      "default_cycleType": "allInOne",
+      "estimated_minutes_default": 152,
+      "options": {
+        "cycleTypes": [
+          "allInOne",
+          "washingOnly",
+          "dryingOnly"
+        ],
+        "waterTemperature": [
+          "tapCold",
+          "cold",
+          "warm"
+        ],
+        "waterTemperature_default": "warm",
+        "spinLevel": [
+          "rinseHold",
+          "noSpin",
+          "extraLow",
+          "low",
+          "medium"
+        ],
+        "spinLevel_default": "medium",
+        "soilLevel": [
+          "extraLight",
+          "light",
+          "normal",
+          "heavy",
+          "extraHeavy"
+        ],
+        "soilLevel_default": "normal",
+        "dryingLevel": [
+          "damp",
+          "less",
+          "normal"
+        ],
+        "dryingLevel_default": "less",
+        "dryingTime": [],
+        "dryingTime_default": "0",
+        "wrinklePrevent": [
+          "on",
+          "off"
+        ],
+        "wrinklePrevent_default": "off",
+        "bubbleSoak": [
+          "on",
+          "off"
+        ],
+        "bubbleSoak_default": "off",
+        "washingOnly_spinLevel_default": "low"
+      }
+    },
+    {
+      "code": "AA",
+      "washerCycle_value": "Table_02_Course_AA",
+      "panel_name": "Air Fluff",
+      "allowed_cycleTypes": [
+        "dryingOnly"
+      ],
+      "default_cycleType": "dryingOnly",
+      "estimated_minutes_default": 30,
+      "options": {
+        "cycleTypes": [
+          "dryingOnly"
+        ],
+        "dryingTime": [
+          "0",
+          "20",
+          "30",
+          "40",
+          "50",
+          "60",
+          "90",
+          "120",
+          "150",
+          "180"
+        ],
+        "dryingTime_default": "30",
+        "dryingLevel": [],
+        "dryingLevel_default": "none",
+        "spinLevel": [],
+        "spinLevel_default": "rinseHold",
+        "waterTemperature": [],
+        "waterTemperature_default": "none",
+        "soilLevel": [],
+        "soilLevel_default": "none",
+        "wrinklePrevent": [
+          "on",
+          "off"
+        ],
+        "wrinklePrevent_default": "off",
+        "bubbleSoak": []
+      }
+    },
+    {
+      "code": "06",
+      "washerCycle_value": "Table_02_Course_06",
+      "panel_name": "Bedding",
+      "allowed_cycleTypes": [
+        "allInOne",
+        "washingOnly",
+        "dryingOnly"
+      ],
+      "default_cycleType": "allInOne",
+      "estimated_minutes_default": 259,
+      "options": "not captured"
+    },
+    {
+      "code": "65",
+      "washerCycle_value": "Table_02_Course_65",
+      "panel_name": "Colors",
+      "allowed_cycleTypes": [
+        "allInOne",
+        "washingOnly",
+        "dryingOnly"
+      ],
+      "default_cycleType": "allInOne",
+      "estimated_minutes_default": 156,
+      "options": {
+        "cycleTypes": [
+          "allInOne",
+          "washingOnly",
+          "dryingOnly"
+        ],
+        "waterTemperature": [
+          "cold"
+        ],
+        "waterTemperature_default": "cold",
+        "spinLevel": [
+          "rinseHold",
+          "noSpin",
+          "extraLow",
+          "low",
+          "medium",
+          "high",
+          "extraHigh"
+        ],
+        "spinLevel_default": "extraHigh",
+        "soilLevel": [
+          "extraLight",
+          "light",
+          "normal",
+          "heavy",
+          "extraHeavy"
+        ],
+        "soilLevel_default": "normal",
+        "dryingLevel": [
+          "damp",
+          "less",
+          "normal",
+          "more"
+        ],
+        "dryingLevel_default": "normal",
+        "dryingTime": [],
+        "dryingTime_default": "0",
+        "wrinklePrevent": [
+          "on",
+          "off"
+        ],
+        "wrinklePrevent_default": "off",
+        "bubbleSoak": [
+          "on",
+          "off"
+        ],
+        "bubbleSoak_default": "off",
+        "washingOnly_spinLevel_default": "high"
+      }
+    },
+    {
+      "code": "57",
+      "washerCycle_value": "Table_02_Course_57",
+      "panel_name": "Delicates",
+      "allowed_cycleTypes": [
+        "allInOne",
+        "washingOnly",
+        "dryingOnly"
+      ],
+      "default_cycleType": "allInOne",
+      "estimated_minutes_default": 144,
+      "options": {
+        "cycleTypes": [
+          "allInOne",
+          "washingOnly",
+          "dryingOnly"
+        ],
+        "waterTemperature": [
+          "tapCold",
+          "cold",
+          "warm"
+        ],
+        "waterTemperature_default": "tapCold",
+        "spinLevel": [
+          "rinseHold",
+          "noSpin",
+          "extraLow",
+          "low",
+          "medium"
+        ],
+        "spinLevel_default": "medium",
+        "soilLevel": [
+          "extraLight",
+          "light",
+          "normal",
+          "heavy",
+          "extraHeavy"
+        ],
+        "soilLevel_default": "normal",
+        "dryingLevel": [
+          "damp",
+          "less",
+          "normal"
+        ],
+        "dryingLevel_default": "less",
+        "dryingTime": [],
+        "dryingTime_default": "0",
+        "wrinklePrevent": [
+          "on",
+          "off"
+        ],
+        "wrinklePrevent_default": "off",
+        "bubbleSoak": [],
+        "bubbleSoak_default": "off"
+      }
+    },
+    {
+      "code": "52",
+      "washerCycle_value": "Table_02_Course_52",
+      "panel_name": "Eco Cold",
+      "allowed_cycleTypes": [
+        "allInOne",
+        "washingOnly",
+        "dryingOnly"
+      ],
+      "default_cycleType": "allInOne",
+      "estimated_minutes_default": 170,
+      "options": {
+        "cycleTypes": [
+          "allInOne",
+          "washingOnly",
+          "dryingOnly"
+        ],
+        "waterTemperature": [
+          "tapCold",
+          "cold"
+        ],
+        "waterTemperature_default": "tapCold",
+        "spinLevel": [
+          "rinseHold",
+          "noSpin",
+          "extraLow",
+          "low",
+          "medium",
+          "high",
+          "extraHigh"
+        ],
+        "spinLevel_default": "extraHigh",
+        "soilLevel": [
+          "extraLight",
+          "light",
+          "normal",
+          "heavy",
+          "extraHeavy"
+        ],
+        "soilLevel_default": "normal",
+        "dryingLevel": [
+          "damp",
+          "less",
+          "normal",
+          "more"
+        ],
+        "dryingLevel_default": "normal",
+        "dryingTime": [],
+        "dryingTime_default": "0",
+        "wrinklePrevent": [
+          "on",
+          "off"
+        ],
+        "wrinklePrevent_default": "off",
+        "bubbleSoak": [
+          "on",
+          "off"
+        ],
+        "bubbleSoak_default": "off",
+        "washingOnly_spinLevel_default": "high"
+      }
+    },
+    {
+      "code": "53",
+      "washerCycle_value": "Table_02_Course_53",
+      "panel_name": "Heavy Duty",
+      "allowed_cycleTypes": [
+        "allInOne",
+        "washingOnly",
+        "dryingOnly"
+      ],
+      "default_cycleType": "allInOne",
+      "estimated_minutes_default": 272,
+      "options": {
+        "cycleTypes": [
+          "allInOne",
+          "washingOnly",
+          "dryingOnly"
+        ],
+        "waterTemperature": [
+          "tapCold",
+          "cold",
+          "warm",
+          "hot",
+          "extraHot"
+        ],
+        "waterTemperature_default": "hot",
+        "spinLevel": [
+          "rinseHold",
+          "noSpin",
+          "extraLow",
+          "low",
+          "medium",
+          "high",
+          "extraHigh"
+        ],
+        "spinLevel_default": "extraHigh",
+        "soilLevel": [
+          "extraLight",
+          "light",
+          "normal",
+          "heavy",
+          "extraHeavy"
+        ],
+        "soilLevel_default": "extraHeavy",
+        "dryingLevel": [
+          "normal",
+          "more"
+        ],
+        "dryingLevel_default": "normal",
+        "dryingTime": [],
+        "dryingTime_default": "0",
+        "wrinklePrevent": [
+          "on",
+          "off"
+        ],
+        "wrinklePrevent_default": "off",
+        "bubbleSoak": [
+          "on",
+          "off"
+        ],
+        "bubbleSoak_default": "off"
+      }
+    },
+    {
+      "code": "96",
+      "washerCycle_value": "Table_02_Course_96",
+      "panel_name": "Less Microfiber",
+      "allowed_cycleTypes": [
+        "allInOne",
+        "washingOnly"
+      ],
+      "default_cycleType": "allInOne",
+      "estimated_minutes_default": 167,
+      "options": {
+        "cycleTypes": [
+          "allInOne",
+          "washingOnly"
+        ],
+        "unavailableCycleTypes": [
+          "dryingOnly"
+        ],
+        "waterTemperature": [
+          "tapCold",
+          "cold"
+        ],
+        "waterTemperature_default": "tapCold",
+        "spinLevel": [
+          "rinseHold",
+          "noSpin",
+          "extraLow",
+          "low",
+          "medium"
+        ],
+        "spinLevel_default": "low",
+        "soilLevel": [
+          "extraLight",
+          "light",
+          "normal",
+          "heavy",
+          "extraHeavy"
+        ],
+        "soilLevel_default": "normal",
+        "dryingLevel": [
+          "damp",
+          "less",
+          "normal",
+          "more"
+        ],
+        "dryingLevel_default": "none",
+        "dryingTime": [],
+        "dryingTime_default": "0",
+        "wrinklePrevent": [
+          "on",
+          "off"
+        ],
+        "wrinklePrevent_default": "off",
+        "bubbleSoak": [
+          "on",
+          "off"
+        ],
+        "bubbleSoak_default": "off"
+      },
+      "estimated_minutes_washingOnly": 54
+    },
+    {
+      "code": "A1",
+      "washerCycle_value": "Table_02_Course_A1",
+      "panel_name": "Normal (panel default)",
+      "allowed_cycleTypes": [
+        "allInOne",
+        "washingOnly",
+        "dryingOnly"
+      ],
+      "default_cycleType": "allInOne",
+      "estimated_minutes_default": 115,
+      "options": "not captured"
+    },
+    {
+      "code": "59",
+      "washerCycle_value": "Table_02_Course_59",
+      "panel_name": "Perm Press",
+      "allowed_cycleTypes": [
+        "allInOne",
+        "washingOnly",
+        "dryingOnly"
+      ],
+      "default_cycleType": "allInOne",
+      "estimated_minutes_default": 153,
+      "options": {
+        "cycleTypes": [
+          "allInOne",
+          "washingOnly",
+          "dryingOnly"
+        ],
+        "waterTemperature": [
+          "tapCold",
+          "cold",
+          "warm"
+        ],
+        "waterTemperature_default": "warm",
+        "spinLevel": [
+          "rinseHold",
+          "noSpin",
+          "extraLow",
+          "low",
+          "medium",
+          "high"
+        ],
+        "spinLevel_default": "high",
+        "soilLevel": [
+          "extraLight",
+          "light",
+          "normal",
+          "heavy",
+          "extraHeavy"
+        ],
+        "soilLevel_default": "normal",
+        "dryingLevel": [
+          "damp",
+          "less",
+          "normal"
+        ],
+        "dryingLevel_default": "less",
+        "dryingTime": [],
+        "dryingTime_default": "0",
+        "wrinklePrevent": [
+          "on",
+          "off"
+        ],
+        "wrinklePrevent_default": "off",
+        "bubbleSoak": [
+          "on",
+          "off"
+        ],
+        "bubbleSoak_default": "off",
+        "washingOnly_spinLevel_default": "low"
+      }
+    },
+    {
+      "code": "A7",
+      "washerCycle_value": "Table_02_Course_A7",
+      "panel_name": "Product Care",
+      "allowed_cycleTypes": [
+        "allInOne",
+        "washingOnly",
+        "dryingOnly"
+      ],
+      "default_cycleType": "allInOne",
+      "estimated_minutes_default": 352,
+      "options": {
+        "cycleTypes": [
+          "allInOne",
+          "washingOnly",
+          "dryingOnly"
+        ],
+        "waterTemperature": [
+          "extraHot"
+        ],
+        "waterTemperature_default": "extraHot",
+        "spinLevel": [
+          "extraHigh"
+        ],
+        "spinLevel_default": "extraHigh",
+        "soilLevel": [
+          "normal"
+        ],
+        "soilLevel_default": "normal",
+        "dryingLevel": [],
+        "dryingLevel_default": "none",
+        "dryingTime": [
+          "90"
+        ],
+        "dryingTime_default": "120",
+        "wrinklePrevent": [],
+        "wrinklePrevent_default": "none",
+        "bubbleSoak": []
+      },
+      "notes": "Most options locked by the machine."
+    },
+    {
+      "code": "08",
+      "washerCycle_value": "Table_02_Course_08",
+      "panel_name": "Rinse and Spin",
+      "allowed_cycleTypes": [
+        "allInOne",
+        "washingOnly",
+        "dryingOnly"
+      ],
+      "default_cycleType": "allInOne",
+      "estimated_minutes_default": 148,
+      "options": {
+        "cycleTypes": [
+          "allInOne",
+          "washingOnly",
+          "dryingOnly"
+        ],
+        "waterTemperature": [],
+        "waterTemperature_default": "none",
+        "spinLevel": [
+          "rinseHold",
+          "noSpin",
+          "extraLow",
+          "low",
+          "medium",
+          "high",
+          "extraHigh"
+        ],
+        "spinLevel_default": "extraHigh",
+        "soilLevel": [],
+        "soilLevel_default": "none",
+        "dryingLevel": [
+          "damp",
+          "less",
+          "normal",
+          "more"
+        ],
+        "dryingLevel_default": "normal",
+        "dryingTime": [],
+        "dryingTime_default": "0",
+        "wrinklePrevent": [
+          "on",
+          "off"
+        ],
+        "wrinklePrevent_default": "off",
+        "bubbleSoak": [],
+        "washingOnly_spinLevel_default": "high"
+      }
+    },
+    {
+      "code": "5B",
+      "washerCycle_value": "Table_02_Course_5B",
+      "panel_name": "Small Load",
+      "allowed_cycleTypes": [
+        "allInOne",
+        "washingOnly",
+        "dryingOnly"
+      ],
+      "default_cycleType": "allInOne",
+      "estimated_minutes_default": 112,
+      "options": {
+        "cycleTypes": [
+          "allInOne",
+          "washingOnly",
+          "dryingOnly"
+        ],
+        "waterTemperature": [
+          "tapCold",
+          "cold",
+          "warm",
+          "hot"
+        ],
+        "waterTemperature_default": "warm",
+        "spinLevel": [
+          "rinseHold",
+          "noSpin",
+          "extraLow",
+          "low",
+          "medium",
+          "high",
+          "extraHigh"
+        ],
+        "spinLevel_default": "extraHigh",
+        "soilLevel": [
+          "extraLight",
+          "light",
+          "normal",
+          "heavy",
+          "extraHeavy"
+        ],
+        "soilLevel_default": "extraLight",
+        "dryingLevel": [
+          "damp",
+          "less",
+          "normal",
+          "more"
+        ],
+        "dryingLevel_default": "normal",
+        "dryingTime": [],
+        "dryingTime_default": "0",
+        "wrinklePrevent": [
+          "on",
+          "off"
+        ],
+        "wrinklePrevent_default": "off",
+        "bubbleSoak": [],
+        "bubbleSoak_default": "off"
+      }
+    },
+    {
+      "code": "5F",
+      "washerCycle_value": "Table_02_Course_5F",
+      "panel_name": "Spin Only",
+      "allowed_cycleTypes": [
+        "allInOne",
+        "washingOnly",
+        "dryingOnly"
+      ],
+      "default_cycleType": "allInOne",
+      "estimated_minutes_default": 141,
+      "options": {
+        "cycleTypes": [
+          "allInOne",
+          "washingOnly",
+          "dryingOnly"
+        ],
+        "waterTemperature": [],
+        "waterTemperature_default": "none",
+        "spinLevel": [
+          "noSpin",
+          "extraLow",
+          "low",
+          "medium",
+          "high",
+          "extraHigh"
+        ],
+        "spinLevel_default": "extraHigh",
+        "soilLevel": [],
+        "soilLevel_default": "none",
+        "dryingLevel": [
+          "damp",
+          "less",
+          "normal",
+          "more"
+        ],
+        "dryingLevel_default": "normal",
+        "dryingTime": [],
+        "dryingTime_default": "0",
+        "wrinklePrevent": [
+          "on",
+          "off"
+        ],
+        "wrinklePrevent_default": "off",
+        "bubbleSoak": [],
+        "washingOnly_spinLevel_default": "high"
+      }
+    },
+    {
+      "code": "85",
+      "washerCycle_value": "Table_02_Course_85",
+      "panel_name": "Steam Normal",
+      "allowed_cycleTypes": [
+        "allInOne",
+        "washingOnly",
+        "dryingOnly"
+      ],
+      "default_cycleType": "allInOne",
+      "estimated_minutes_default": 177,
+      "options": {
+        "cycleTypes": [
+          "allInOne",
+          "washingOnly",
+          "dryingOnly"
+        ],
+        "waterTemperature": [
+          "hot"
+        ],
+        "waterTemperature_default": "hot",
+        "spinLevel": [
+          "rinseHold",
+          "noSpin",
+          "extraLow",
+          "low",
+          "medium",
+          "high",
+          "extraHigh"
+        ],
+        "spinLevel_default": "extraHigh",
+        "soilLevel": [
+          "extraLight",
+          "light",
+          "normal",
+          "heavy",
+          "extraHeavy"
+        ],
+        "soilLevel_default": "normal",
+        "dryingLevel": [
+          "more"
+        ],
+        "dryingLevel_default": "more",
+        "dryingTime": [],
+        "dryingTime_default": "0",
+        "wrinklePrevent": [
+          "on",
+          "off"
+        ],
+        "wrinklePrevent_default": "off",
+        "bubbleSoak": [
+          "on",
+          "off"
+        ],
+        "bubbleSoak_default": "off",
+        "washingOnly_spinLevel_default": "high"
+      }
+    },
+    {
+      "code": "5A",
+      "washerCycle_value": "Table_02_Course_5A",
+      "panel_name": "Steam Sanitize",
+      "allowed_cycleTypes": [
+        "allInOne",
+        "washingOnly",
+        "dryingOnly"
+      ],
+      "default_cycleType": "allInOne",
+      "estimated_minutes_default": 303,
+      "options": {
+        "cycleTypes": [
+          "allInOne",
+          "washingOnly",
+          "dryingOnly"
+        ],
+        "waterTemperature": [
+          "extraHot"
+        ],
+        "waterTemperature_default": "extraHot",
+        "spinLevel": [
+          "rinseHold",
+          "noSpin",
+          "extraLow",
+          "low",
+          "medium",
+          "high",
+          "extraHigh"
+        ],
+        "spinLevel_default": "extraHigh",
+        "soilLevel": [
+          "extraLight",
+          "light",
+          "normal",
+          "heavy",
+          "extraHeavy"
+        ],
+        "soilLevel_default": "normal",
+        "dryingLevel": [
+          "more"
+        ],
+        "dryingLevel_default": "more",
+        "dryingTime": [],
+        "dryingTime_default": "0",
+        "wrinklePrevent": [
+          "on",
+          "off"
+        ],
+        "wrinklePrevent_default": "off",
+        "bubbleSoak": [
+          "on",
+          "off"
+        ],
+        "bubbleSoak_default": "off",
+        "washingOnly_spinLevel_default": "high"
+      }
+    },
+    {
+      "code": "64",
+      "washerCycle_value": "Table_02_Course_64",
+      "panel_name": "Steam Whites",
+      "allowed_cycleTypes": [
+        "allInOne",
+        "washingOnly",
+        "dryingOnly"
+      ],
+      "default_cycleType": "allInOne",
+      "estimated_minutes_default": 193,
+      "options": {
+        "cycleTypes": [
+          "allInOne",
+          "washingOnly",
+          "dryingOnly"
+        ],
+        "waterTemperature": [
+          "hot"
+        ],
+        "waterTemperature_default": "hot",
+        "spinLevel": [
+          "rinseHold",
+          "noSpin",
+          "extraLow",
+          "low",
+          "medium",
+          "high",
+          "extraHigh"
+        ],
+        "spinLevel_default": "extraHigh",
+        "soilLevel": [
+          "extraLight",
+          "light",
+          "normal",
+          "heavy",
+          "extraHeavy"
+        ],
+        "soilLevel_default": "normal",
+        "dryingLevel": [
+          "more"
+        ],
+        "dryingLevel_default": "more",
+        "dryingTime": [],
+        "dryingTime_default": "0",
+        "wrinklePrevent": [
+          "on",
+          "off"
+        ],
+        "wrinklePrevent_default": "off",
+        "bubbleSoak": [
+          "on",
+          "off"
+        ],
+        "bubbleSoak_default": "off",
+        "washingOnly_spinLevel_default": "high"
+      }
+    },
+    {
+      "code": "51",
+      "washerCycle_value": "Table_02_Course_51",
+      "panel_name": "Super Speed",
+      "allowed_cycleTypes": [
+        "allInOne",
+        "washingOnly",
+        "dryingOnly"
+      ],
+      "default_cycleType": "allInOne",
+      "estimated_minutes_default": 95,
+      "options": {
+        "cycleTypes": [
+          "allInOne",
+          "washingOnly",
+          "dryingOnly"
+        ],
+        "waterTemperature": [
+          "warm",
+          "hot"
+        ],
+        "waterTemperature_default": "warm",
+        "spinLevel": [
+          "rinseHold",
+          "noSpin",
+          "extraLow",
+          "low",
+          "medium",
+          "high",
+          "extraHigh"
+        ],
+        "spinLevel_default": "extraHigh",
+        "soilLevel": [
+          "extraLight",
+          "light",
+          "normal",
+          "heavy",
+          "extraHeavy"
+        ],
+        "soilLevel_default": "normal",
+        "dryingLevel": [
+          "damp",
+          "less",
+          "normal",
+          "more"
+        ],
+        "dryingLevel_default": "normal",
+        "dryingTime": [],
+        "dryingTime_default": "0",
+        "wrinklePrevent": [
+          "on",
+          "off"
+        ],
+        "wrinklePrevent_default": "off",
+        "bubbleSoak": [],
+        "bubbleSoak_default": "off",
+        "washingOnly_spinLevel_default": "high"
+      }
+    },
+    {
+      "code": "A9",
+      "washerCycle_value": "Table_02_Course_A9",
+      "panel_name": "Tide Pod Cold",
+      "allowed_cycleTypes": [
+        "allInOne",
+        "washingOnly",
+        "dryingOnly"
+      ],
+      "default_cycleType": "allInOne",
+      "estimated_minutes_default": 162,
+      "options": {
+        "cycleTypes": [
+          "allInOne",
+          "washingOnly",
+          "dryingOnly"
+        ],
+        "waterTemperature": [
+          "tapCold",
+          "cold"
+        ],
+        "waterTemperature_default": "tapCold",
+        "spinLevel": [
+          "rinseHold",
+          "noSpin",
+          "extraLow",
+          "low",
+          "medium",
+          "high",
+          "extraHigh"
+        ],
+        "spinLevel_default": "extraHigh",
+        "soilLevel": [
+          "extraLight",
+          "light",
+          "normal",
+          "heavy",
+          "extraHeavy"
+        ],
+        "soilLevel_default": "normal",
+        "dryingLevel": [
+          "damp",
+          "less",
+          "normal",
+          "more"
+        ],
+        "dryingLevel_default": "normal",
+        "dryingTime": [],
+        "dryingTime_default": "0",
+        "wrinklePrevent": [
+          "on",
+          "off"
+        ],
+        "wrinklePrevent_default": "off",
+        "bubbleSoak": [
+          "on",
+          "off"
+        ],
+        "bubbleSoak_default": "off",
+        "washingOnly_spinLevel_default": "high"
+      }
+    },
+    {
+      "code": "A8",
+      "washerCycle_value": "Table_02_Course_A8",
+      "panel_name": "Time Dry",
+      "allowed_cycleTypes": [
+        "dryingOnly"
+      ],
+      "default_cycleType": "dryingOnly",
+      "estimated_minutes_default": 60,
+      "options": {
+        "cycleTypes": [
+          "dryingOnly"
+        ],
+        "dryingTime": [
+          "0",
+          "20",
+          "30",
+          "40",
+          "50",
+          "60",
+          "90",
+          "120",
+          "150",
+          "180"
+        ],
+        "dryingTime_default": "60",
+        "dryingLevel": [],
+        "spinLevel": [],
+        "waterTemperature": [],
+        "soilLevel": [],
+        "wrinklePrevent": [
+          "on",
+          "off"
+        ],
+        "bubbleSoak": []
+      }
+    },
+    {
+      "code": "54",
+      "washerCycle_value": "Table_02_Course_54",
+      "panel_name": "Towels",
+      "allowed_cycleTypes": [
+        "allInOne",
+        "washingOnly",
+        "dryingOnly"
+      ],
+      "default_cycleType": "allInOne",
+      "estimated_minutes_default": 216,
+      "options": "not captured"
+    },
+    {
+      "code": "58",
+      "washerCycle_value": "Table_02_Course_58",
+      "panel_name": "Wool",
+      "allowed_cycleTypes": [
+        "allInOne",
+        "washingOnly",
+        "dryingOnly"
+      ],
+      "default_cycleType": "allInOne",
+      "estimated_minutes_default": 89,
+      "options": "not captured"
+    }
+  ]
+}
